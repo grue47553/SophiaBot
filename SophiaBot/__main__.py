@@ -45,7 +45,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from telegram.ext.dispatcher import DispatcherHandlerStop, ruanc
+from telegram.ext.dispatcher import DispatcherHandlerStop,Grou] , c
 from telegram.utils.helpers import escape_markdown
 
 
@@ -89,8 +89,7 @@ buttons = [
     ],
     
     [
-        InlineKeyboardButton(text="➕ Add Me to your Group➕ ", url="t.me/naruto_the_manager_bot?startgroup=true"),   
-    ],
+        InlineKeyboardButton(text="💚 Add Me to your Group💚 ", url="t.me/naruto_the_manager_bot?startgroup=true"),   
 ]
 
 HELP_STRINGS = """
