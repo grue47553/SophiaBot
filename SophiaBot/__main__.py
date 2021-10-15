@@ -87,18 +87,9 @@ buttons = [
     [
         InlineKeyboardButton(text=" Commands Help ❓", callback_data="help_back"),
     ],
+  
     [
-        InlineKeyboardButton(text="Info & About 🙋‍", callback_data="source_"),
-        InlineKeyboardButton(
-                  text="System Stats 💻", callback_data="stats_callback"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text=" Sophia News 🙋‍♀️ ", url=f"https://t.me/SophiaUpdates"),
-        InlineKeyboardButton(text=" Support Group 💬 ", url=f"https://t.me/SophiaSupport_Official"),
-    ],
-    [
-        InlineKeyboardButton(text="➕ Add ɴᴀʀᴜᴛᴏ  to your Group ➕", url="t.me/SophiaSLBot?startgroup=true"),   
+        InlineKeyboardButton(text="➕ Add ɴᴀʀᴜᴛᴏ  to your Group ➕", url="t.me/naruto_the_manager_bot?startgroup=true"),   
     ],
 ]
 
