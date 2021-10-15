@@ -90,7 +90,7 @@ buttons = [
     
     [
         InlineKeyboardButton(text="💚 Add Me to your Group💚 ", url="t.me/naruto_the_manager_bot?startgroup=true"),   
-]
+],
 
 HELP_STRINGS = """
 ✘✘✘ 𝗛𝗲𝗹𝗽𝗳𝘂𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ✘✘✘
