@@ -105,7 +105,7 @@ buttons = [
 HELP_STRINGS = """
 ✘✘✘ 𝗛𝗲𝗹𝗽𝗳𝘂𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ✘✘✘
 
-Every possibility of Sophia is documentated here
+Every possibility of Naruto is documentated here
 Click buttons to get help
 """
 
