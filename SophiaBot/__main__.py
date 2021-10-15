@@ -45,7 +45,7 @@ from telegram.ext import (
     Filters,
     MessageHandler,
 )
-from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
+from telegram.ext.dispatcher import DispatcherHandlerStop, ruanc
 from telegram.utils.helpers import escape_markdown
 
 
@@ -87,16 +87,7 @@ buttons = [
     [
         InlineKeyboardButton(text=" Commands Help ❓", callback_data="help_back"),
     ],
-    [
-        InlineKeyboardButton(text="Info & About 🙋‍", callback_data="source_"),
-        InlineKeyboardButton(
-                  text="System Stats 💻", callback_data="stats_callback"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text=" Naruto News 🙋‍♀️ ", url=f"https://t.me/Bot_updat_002"),
-        InlineKeyboardButton(text=" Support Group 💬 ", url=f"https://t.me/bot_sup_002"),
-    ],
+    
     [
         InlineKeyboardButton(text="➕ Add Me to your Group➕ ", url="t.me/naruto_the_manager_bot?startgroup=true"),   
     ],
