@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-PM_START_TEXT = """Hey there 👋! My name is *Naruto*.\n\nI can help manage your groups with useful features, feel free to add me to your groups!."""
+PM_START_TEXT = """Hey there 👋! My name is *Vixen*.\n\nI can help manage your groups with useful features, feel free to add me to your groups!."""
 
 STICKERS = (
       "CAACAgUAAx0CTpRfGwACF41hMfagTfWdHNFici1VtOCQVVNYmgACgh8AAsZRxhU6tKJa_ySnnCAE",
@@ -86,16 +86,14 @@ STICKERS = (
 buttons = [
     [
         InlineKeyboardButton(text=" Commands Help ❓", callback_data="help_back"),
-    ],
+    ]
     
-    [
-        InlineKeyboardButton(text="💚 Add Me to your Group💚 ", url="t.me/naruto_the_manager_bot?startgroup=true"),   
-]
+
 
 HELP_STRINGS = """
 ✘✘✘ 𝗛𝗲𝗹𝗽𝗳𝘂𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀 ✘✘✘
 
-Every possibility of Naruto is documentated here
+Every possibility of Vixen is documentated here
 Click buttons to get help
 """
 
@@ -212,7 +210,7 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text("Heya, Sophia here :) PM me if you have any questions how to use me!")
+        update.effective_message.reply_text("Heya, Vixen here :) PM me if you have any questions how to use me!")
 
 
 def error_handler(update, context):
