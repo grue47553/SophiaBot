@@ -6,7 +6,7 @@ from sys import argv
 from typing import Optional
 from pyrogram import filters, idle
 
-from SophiaBot import (
+from VixenBot import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
@@ -25,10 +25,10 @@ from SophiaBot import (
     updater,
 )
 
-from SophiaBot.modules import ALL_MODULES
-from SophiaBot.modules.helper_funcs.chat_status import is_user_admin
-from SophiaBot.modules.helper_funcs.misc import paginate_modules
-from SophiaBot.modules.sudoers import bot_sys_stats
+from VixenBot.modules import ALL_MODULES
+from VixenBot.modules.helper_funcs.chat_status import is_user_admin
+from VixenBot.modules.helper_funcs.misc import paginate_modules
+from VixenBot.modules.sudoers import bot_sys_stats
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -104,7 +104,7 @@ CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("SophiaBot.modules." + module_name)
+    imported_module = importlib.import_module("VixenBot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -331,31 +331,31 @@ def help_button(update, context):
 
 
 @run_async
-def sophia_about_callback(update, context):
+def Vixen_about_callback(update, context):
     query = update.callback_query
-    if query.data == "sophia_":
+    if query.data == "Vixen_":
         query.message.edit_text(
-            text=""" My name is *Sophia*, I have been written with Pyrogram and Telethon.. I'm online since 10 June 2021 and is constantly updated!
+            text=""" My name is *Vixen*, I have been written with Pyrogram and Telethon.. I'm online since 10 June 2021 and is constantly updated!
 *Bot Version: 3.0*
 \n*Bot Developers:*
 -  @dihanrandila
 -  @InukaASiTH
-\n* Updates Channel:* @SophiaUpdates
-* Support Chat:* @SophiaSupport_Official
+\n* Updates Channel:* @VixenUpdates
+* Support Chat:* @VixenSupport_Official
                  \n\n* And finally special thanks of gratitude to all my users who relied on me for managing their groups, I hope you will always like me; My developers are constantly working to improve me!
                  \n\n *Licensed under the GNU Affero General Public Lisence v3.0*
-                 \n© 2020 - 2021 @SophiaSLBot. All Rights Reserved """,
+                 \n© 2020 - 2021 @VixenSLBot. All Rights Reserved """,
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sophia_back")
+                    InlineKeyboardButton(text="Back", callback_data="Vixen_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "sophia_back":
+    elif query.data == "Vixen_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -366,12 +366,12 @@ def sophia_about_callback(update, context):
 
         
 
-    elif query.data == "sophia_basichelp":
+    elif query.data == "Vixen_basichelp":
         query.message.edit_text(
             text=f"*Here's basic Help regarding* *How to use Me?*"
             f"\n\n• Firstly Add {dispatcher.bot.first_name} to your group by pressing [here](http://t.me/{dispatcher.bot.username}?startgroup=true)\n"
             f"\n• After adding promote me manually with full rights for faster experience.\n"
-            f"\n• Than send `/admincache@SophiaSLBot` in that chat to refresh admin list in My database.\n"
+            f"\n• Than send `/admincache@VixenSLBot` in that chat to refresh admin list in My database.\n"
             f"\n\n*All done now use below given button's to know about use!*\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
@@ -379,12 +379,12 @@ def sophia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins 👮‍♂️", callback_data="sophia_admin"),
-                    InlineKeyboardButton(text="Notes 📑", callback_data="sophia_notes"),
+                    InlineKeyboardButton(text="Admins 👮‍♂️", callback_data="Vixen_admin"),
+                    InlineKeyboardButton(text="Notes 📑", callback_data="Vixen_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support 👨‍🔧", callback_data="sophia_support"),
-                    InlineKeyboardButton(text="Credits 👨‍💻", callback_data="sophia_credit"),
+                    InlineKeyboardButton(text="Support 👨‍🔧", callback_data="Vixen_support"),
+                    InlineKeyboardButton(text="Credits 👨‍💻", callback_data="Vixen_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Back", callback_data="source_"),
@@ -394,10 +394,10 @@ def sophia_about_callback(update, context):
             ),
         )
 
-    elif query.data == "sophia_admin":
+    elif query.data == "Vixen_admin":
         query.message.edit_text(
             text=f"*Let's make your group bit effective now*"
-            f"\nCongragulations, *Sophia* now ready to manage your group."
+            f"\nCongragulations, *Vixen* now ready to manage your group."
             f"\n\n*Admin Tools*"
             f"\nBasic Admin tools help you to protect and powerup your group."
             f"\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -407,11 +407,11 @@ def sophia_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="sophia_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="Vixen_basichelp")]]
             ),
         )
 
-    elif query.data == "sophia_notes":
+    elif query.data == "Vixen_notes":
         query.message.edit_text(
             text=f"<b> Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -419,12 +419,12 @@ def sophia_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="sophia_basichelp")]]
+                [[InlineKeyboardButton(text="Back", callback_data="Vixen_basichelp")]]
             ),
         )
-    elif query.data == "sophia_support":
+    elif query.data == "Vixen_support":
         query.message.edit_text(
-            text="* Sophia's Updates News & Supports*"
+            text="* Vixen's Updates News & Supports*"
             "\nJoin Support Group & Updates Channel",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -434,16 +434,16 @@ def sophia_about_callback(update, context):
                     InlineKeyboardButton(text="Updates Channel", url="t.me/dihanofficial"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sophia_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="Vixen_basichelp"),
                  
                  ]
                 ]
             ),
         )
-    elif query.data == "sophia_credit":
+    elif query.data == "Vixen_credit":
         query.message.edit_text(
-            text=f"*Credit For Sophia's Devs*\n"
-            f"\nHere Some Developers Helping in Making The Sophia Bot",
+            text=f"*Credit For Vixen's Devs*\n"
+            f"\nHere Some Developers Helping in Making The Vixen Bot",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -452,7 +452,7 @@ def sophia_about_callback(update, context):
                     InlineKeyboardButton(text="Inuka", url="t.me/InukaASiTH"),
                  ],
                  [
-                    InlineKeyboardButton(text="Back", callback_data="sophia_basichelp"),
+                    InlineKeyboardButton(text="Back", callback_data="Vixen_basichelp"),
                  
                  ]
                 ]
@@ -479,15 +479,15 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                   [
-                    InlineKeyboardButton(text="🙋‍♀️ About Me", callback_data="sophia_"),
-                    InlineKeyboardButton(text="❓ Basic Help", callback_data="sophia_basichelp"),
+                    InlineKeyboardButton(text="🙋‍♀️ About Me", callback_data="Vixen_"),
+                    InlineKeyboardButton(text="❓ Basic Help", callback_data="Vixen_basichelp"),
                   ],
                   [
                     InlineKeyboardButton(text=" Special Credits ❤ ", url=f"https://telegra.ph/Special-Credits-08-21"),
                     InlineKeyboardButton(text="Terms And Conditions 📄 ", url=f"https://telegra.ph/Terms-and-Conditions-08-21"),
                   ],
                   [
-                    InlineKeyboardButton(text="💾 Source Code", url=f"https://github.com/dihanofficial/SophiaBot"),
+                    InlineKeyboardButton(text="💾 Source Code", url=f"https://github.com/dihanofficial/VixenBot"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="source_back")
@@ -786,7 +786,7 @@ def main():
             dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "I'm Online Now! 💫 ")
         except Unauthorized:
             LOGGER.warning(
-                "Bot isnt able to send message to @SophiaSupport_Official, go and check!"
+                "Bot isnt able to send message to @VixenSupport_Official, go and check!"
             )
         except BadRequest as e:
             LOGGER.warning(e.message)
@@ -800,7 +800,7 @@ def main():
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
 
-    about_callback_handler = CallbackQueryHandler(sophia_about_callback, pattern=r"sophia_")
+    about_callback_handler = CallbackQueryHandler(Vixen_about_callback, pattern=r"Vixen_")
     source_callback_handler = CallbackQueryHandler(Source_about_callback, pattern=r"source_")
 
     donate_handler = CommandHandler("donate", donate)
